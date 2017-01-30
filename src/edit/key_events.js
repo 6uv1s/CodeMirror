@@ -116,6 +116,7 @@ export function onKeyDown(e) {
   // Turn mouse into crosshair when Alt is held on Mac.
   if (code == 18 && !/\bCodeMirror-crosshair\b/.test(cm.display.lineDiv.className))
     showCrossHair(cm)
+  handleCharBinding(cm, e, e.key)
 }
 
 function showCrossHair(cm) {
